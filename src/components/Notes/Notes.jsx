@@ -18,6 +18,10 @@ const Notes = () => {
   const handleAddNotes = () => {
     setInputValue("");
     setDescriptionValue("");
+    if(!inputValue || !descriptionValue){
+      alert("Please fill in all the fields")
+      return
+    }
     setNotes(() => {
       const updatedNotes = [
         ...notes,
